@@ -1,6 +1,11 @@
-# 특정 기업의 채용 과제로 진행
-
-## 요약
+# Title Classifier Using LightGBM with Tokenizer
+아래의 사용 데이터의 형태를 학습 데이터셋으로 사용해 영어가 포함된 제목으로 해당 컨텐츠가 어떤 유형 인지 분류하는 분류기를 LightGBM(왜냐면 핫하니깐)을 사용해서 진행 해본다.
+## 사용 데이터
+~~~csv
+titles	labels
+뭔가의제목	분류
+~~~
+## 과정 정리 
 특정 키워드의 존재 여부가 클래스로 분류 되는데 영향을 많이 작용할 것이라고 예상 했습니다.   
 
 Bag Of Words 형태로 입력 데이터를 토큰화하고    
@@ -21,11 +26,7 @@ SUM을 한 결과 전체 Accuracy는 변화가 적었지만, F1 Score의 경우 
 
 성능 평가 metric으로 top1, 3, 5의 각 클래스 별 Accuracy, 각 클래스 별 f1 Score를 사용했습니다.
 
-## 사용 데이터
-~~~csv
-titles	labels
-뭔가의제목	분류
-~~~
+
 ## 실행 방법 
 ~~~sh 
 conda env create -f environment.yml # conda 가상 환경 생성
