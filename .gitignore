@@ -1,0 +1,7 @@
+*.report
+*.json
+*.pkl
+*.tsv
+/models
+*.csv
+*.txt
